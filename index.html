@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+</head>
+<body>
+
+	<input type = "text" onkeypress = "apertoutecla(event)" id = "entrada">
+
+	<button id= "botao" onclick = "clicar ()">OK</button>
+
+	<div style="height: 50px; width: 50px; 
+            background-color: red; margin-top: 20px;">
+        </div>
+
+        <div id="box2" onmouseleave="mudarCor()" 
+            onmouseenter="voltarCor()" 
+            style="height: 50px; width: 50px; 
+            background-color: blue; margin-top: 20px;">
+        </div>
+       
+        <script>
+        	function mudarCor(){
+                let caixa = document.getElementById('box2')
+                caixa.style.backgroundColor = 'purple'
+                caixa.style.height = '60px'
+                caixa.style.width = '60px'
+            }
+
+            function voltarCor(){
+               let caixa = document.getElementById('box2')
+                caixa.style.backgroundColor = 'blue'
+                caixa.style.height = '50px'
+                caixa.style.width = '50px'
+            } 
+
+            function aumentarDiv(){
+                let caixa = document.getElementById('box1')
+                caixa.style.height = '60px'
+                caixa.style.width = '60px'
+            }
+            function diminuirDiv(){
+               let caixa = document.getElementById('box1')
+                caixa.style.height = '50px'
+                caixa.style.width = '50px'
+            } 
+		
+		function clicar (){
+		}
+				function apertoutecla (event){
+			console.log (event.key)
+			if (event.key == "j")
+				alert ('Exemplo prof. josino')
+		}
+	</script>
+
+</body>
+</html>
